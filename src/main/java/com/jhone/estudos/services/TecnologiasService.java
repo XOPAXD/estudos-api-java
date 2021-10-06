@@ -5,6 +5,7 @@ import com.jhone.estudos.repositories.TecnologiasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +24,7 @@ public class TecnologiasService {
         newObj.setId(obj.getId());
         newObj.setTitulo(obj.getTitulo());
         newObj.setDescricao(obj.getDescricao());
-
+        newObj.setData(LocalDateTime.now());
         return tecrepository.save(newObj);
     }
 

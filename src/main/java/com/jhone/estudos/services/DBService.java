@@ -19,10 +19,10 @@ public class DBService {
 
     public void instanciaDB() {
 
-        Tecnologias t1 = new Tecnologias(null, "JAVA", "tecnologia top só para fera");
-        Tecnologias t2 = new Tecnologias(null, "PHP", "tecnologia mais ou menos");
-        Tecnologias t3 = new Tecnologias(null, "PHYTON", "tecnologia que não conheço ainda");
-        Tecnologias t4 = new Tecnologias(null, "ANGULAR", "front end show de bola!");
+        Tecnologias t1 = new Tecnologias(null, "JAVA", "tecnologia top só para fera",LocalDateTime.now());
+        Tecnologias t2 = new Tecnologias(null, "PHP", "tecnologia mais ou menos",LocalDateTime.now());
+        Tecnologias t3 = new Tecnologias(null, "PHYTON", "tecnologia que não conheço ainda",LocalDateTime.now());
+        Tecnologias t4 = new Tecnologias(null, "ANGULAR", "front end show de bola!",LocalDateTime.now());
 
         tecrepository.saveAll(Arrays.asList(t1, t2,t3,t4));
 

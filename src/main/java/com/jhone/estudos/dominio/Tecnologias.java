@@ -1,6 +1,9 @@
 package com.jhone.estudos.dominio;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Tecnologias {
@@ -10,16 +13,18 @@ public class Tecnologias {
     private Integer id;
     private String titulo;
     private String descricao;
-
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDateTime data;
 
 
     public Tecnologias(){
 
     }
-    public Tecnologias(Integer id, String titulo,String descricao) {
+    public Tecnologias(Integer id, String titulo,String descricao,LocalDateTime data) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
+        this.data      = data;
     }
 
     public Integer getId() {
@@ -46,12 +51,21 @@ public class Tecnologias {
         this.descricao = descricao;
     }
 
+    public LocalDateTime getData() {
+        return data;
+    }
+
+    public void setData(LocalDateTime data) {
+        this.data = data;
+    }
+
     @Override
     public String toString() {
         return "Tecnologias{" +
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
                 ", descricao='" + descricao + '\'' +
+                ", data=" + data +
                 '}';
     }
 }
