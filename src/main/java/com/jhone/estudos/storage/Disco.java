@@ -11,10 +11,10 @@ import java.nio.file.Paths;
 
 @Component
 public class Disco {
-    @Value("c://tmp/")
+    @Value("C:/Users/Jhone/Documents/front/estudos/src")
     private String raiz;
 
-    @Value("uploads")
+    @Value("assets")
     private String diretorio;
 
     public void SalvarArquivos(MultipartFile arquivoP){
